@@ -1,0 +1,2 @@
+ Le fichier requirements.txt va nous permettre d'installer les bibliotheques dont on aura besoin sur un autre serveur grace a la commande : pip install -r requirements.txt.
+
