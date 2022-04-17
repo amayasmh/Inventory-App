@@ -1,2 +1,18 @@
- Le fichier requirements.txt va nous permettre d'installer les bibliotheques dont on aura besoin sur un autre serveur grace a la commande : pip install -r requirements.txt.
+Les taches effectuées:
+
+*Création du projet avec la commande: django-admin startproject InventoryApp
+
+*Le fichier requirements.txt va nous permettre d'installer les bibliotheques dont on aura besoin sur un autre serveur grace a la commande : pip install -r requirements.txt.
+
+*Pour avoir un apercu de notre application en lance le serveur en local avec python manage.py runserver puis on copie l'adresse pour aller sur un navigateur.
+
+*Connecter notre application a une base de données postgresql Inventory_db (user : Inventory_user)
+
+*Un dossier templates qui contiendra les fichiers html et css de notre site
+
+*Création d'une application inv qui va contenir nos models item et brand 
+
+*Faire un python manage.py makesmigrations suivi d'un migrate afin de creer nos tables inv_item et inv_brand dans notre base de données.
+ 
+
 
