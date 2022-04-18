@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>InventoryApp</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <h1>Bonjour, Bienvenue sur notre application !</h1>
+    <h2>Aujourd'hui nous sommes le {{ date|date:"d F Y H:i:s" }}</h2>
+    <table class="table-style">
+        <thead>
+            <tr>
+                <th>Barecode</th>
+                <th>Brand</th>
+                <th>Date_exp</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in items %}
+            <tr>
+                <th>{{item.reference}}</th>
+                <th>{{item.brand}}</th>
+                <th>{{item.date_exp}}</th>
+
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</body>
+</html>
