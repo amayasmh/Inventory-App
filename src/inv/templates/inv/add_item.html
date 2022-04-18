@@ -1,0 +1,15 @@
+{% extends 'main.html' %}
+{% block content %}
+
+<div class="row">
+
+        <div class="card card-body">
+            <form action="" method="POST">
+                {% csrf_token %}<!-- pour crepter les donnes du formulaire pour que ca reste protegeés-->
+                {{form}}
+                <button class="btn btn-primary" type="submit">Add</button>
+            </form>
+        </div>
+</div>
+
+{% endblock content%}

@@ -1,4 +1,4 @@
-from datetime import datetime, timedelta
+from datetime import datetime
 
 from django.test import TestCase
 
@@ -32,7 +32,15 @@ class ItemTestCase(TestCase):
         #ajouter un objet dans notre db
         #valider que le nombre d'objets dasn notre db a été incrémenté de 1
 
+        # probeleme d'asert a cause du format de la date
 
+    def test_update_date_exp_item(self):
+        self.assertEqual(self.testElem.reference, 45458069)
+        self.testElem.date_exp = datetime(2022, 10, 28)
+        self.testElem.save()
+
+        tmp_elem = Item.objects.get(pk=self.testElem.pk)
+        self.assertEqual(tmp_elem.date_exp, datetime(2022, 10, 28))
 
     def test_delete_item(self):
         nb_items_before_delete = Item.objects.count()
@@ -43,12 +51,3 @@ class ItemTestCase(TestCase):
 
 
 
-    #probeleme de date
-    def test_update_date_exp_item(self):
-
-        self.assertEqual(self.testElem.reference, 45458069)
-        self.testElem.date_exp = datetime(2022, 10, 28)
-        self.testElem.save()
-
-        tmp_elem = Item.objects.get(pk=self.testElem.pk)
-        self.assertEqual(tmp_elem.date_exp, datetime(2022, 10, 28))

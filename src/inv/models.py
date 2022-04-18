@@ -10,5 +10,8 @@ class Item(models.Model):
     date_exp = models.DateField()
     brand = models.CharField(max_length=255)
 
+    def __str__(self):
+        return f"{Item.id} {Item.reference} {Item.brand} {Item.date_exp}"
+
 
 

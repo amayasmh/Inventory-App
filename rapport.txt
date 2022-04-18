@@ -1,18 +1,22 @@
-Les taches effectuées:
+*GUIDE D'UTILISATION:
 
-*Création du projet avec la commande: django-admin startproject InventoryApp
+Une fois sur l'interface d'accueil de l'application on a une barre de navigation tout en haut de la page,
+et deux bouttons qui nous permettent d'ajouter un article,
+et un autre pour visualiser tout le contenu de la base( la liste de tout les articles )
+comme on a aussi un affichade des artciles qui expire dans les 30 prochains jours.
 
-*Le fichier requirements.txt va nous permettre d'installer les bibliotheques dont on aura besoin sur un autre serveur grace a la commande : pip install -r requirements.txt.
+*Taches non finalisées:
+Responsive design de la page qui affiche la liste de tous les articles.
+La mise a jour des articles
 
-*Pour avoir un apercu de notre application en lance le serveur en local avec python manage.py runserver puis on copie l'adresse pour aller sur un navigateur.
 
-*Connecter notre application a une base de données postgresql Inventory_db (user : Inventory_user)
+*La durée du travail et les difficultés:
+Environ 2 à 3 h pour la gestion de base de données.
+Environ 7h de travil sur la partie FrontEnd.
 
-*Un dossier templates qui contiendra les fichiers html et css de notre site
+Revoir les bases de HTML/ CSS;
+Quelques notions de Django.
 
-*Création d'une application inv qui va contenir nos models item et brand 
-
-*Faire un python manage.py makesmigrations suivi d'un migrate afin de creer nos tables inv_item et inv_brand dans notre base de données.
  
 
 
